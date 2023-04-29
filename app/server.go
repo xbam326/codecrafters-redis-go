@@ -26,7 +26,7 @@ func main() {
 		if err == io.EOF {
 			break
 		}
-		if _, err := conn.Read(buf); err != nil {
+		if err != nil {
 			fmt.Println("error reading from client: ", err.Error())
 			os.Exit(1)
 		}
